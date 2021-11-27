@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <style>
+            body{
+              background-color: #F4E185;
+            }
+            .header{
+              position:absolute;
+              top:0%;
+              left:0%;
+              width:100%;
+              height:10%;
+              background-color: #F3950D;
+              text-align: center;
+              border-bottom: 2px solid black;
+            }
+            .header .fas{
+                position: relative;
+                left:5%;
+                bottom:5%;
+                color:black;
+            }
+            .back{
+                position:absolute;
+                left:3%;
+                bottom:20%;
+            }
+            .exp{
+              position:absolute;
+              top:13%;
+              left:10%;
+              width:30%;
+              background-color:#E6CCA9 ;
+              border:2px solid black;
+              text-align: center;
+            }
+
+	        .semipie {
+                width:400px;
+                height:200px;
+                
+                position: absolute;
+                top:35%;
+                left:20%;
+                color:#fff;
+                font-size: 20px;
+                display:flex;
+                align-items: flex-end;
+                justify-content: center;
+                box-sizing: border-box;
+                
+                overflow:hidden;
+                --percentage:0;
+                --fill:#000;
+
+            }
+		    .semipie::after{
+                
+                content:' ';
+                position: absolute;
+                left:0;
+                top:0;
+                width:300px;
+                height:300px;
+                border: 50px solid ;
+                border-color:#ff0 #ff0 var(--fill) var(--fill);
+                border-radius:50%;
+                transform:rotate(calc(1deg *(-45 + var(--percentage)*1.8)));
+            }
+            .footer{
+                position:absolute;
+                bottom:0%;
+                left:0%;
+                width:100%;
+                height:10%;
+                background-color:#F3950D;
+                border-top: 2px solid black;
+            }
+
+            
+
+        </style>
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/7b0b641d05.js" crossorigin="anonymous"></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Semi Donut</title>
+    </head>
+    <body>
+        <div class = "header">
+            <h2> PARCH</h2>
+            <div class ='back'><a style="color:black;text-decoration:none;">
+                <i class="fas fa-caret-left fa-2x"></i> </a>
+            </div>
+        </div>
+        
+        <div class="exp">
+            <p> Parch 0 = 76.5% ( 1002/1309 * 100%)</p>
+            <p> Parch >=1 = 23.5% </p>
+            
+        </div>
+        <div class="semipie" style="--percentage:76.5; --fill:blue;color:black;">
+        BLUE = PARCH 0
+        </div>
+        <div class="footer">
+
+        </div>
+
+    </body>
+</html>
